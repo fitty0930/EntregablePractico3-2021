@@ -1,0 +1,172 @@
+body{
+   background-image: url('../images/background-body.jpg');
+}
+#timer div {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100px;
+    height: 105px;
+    border-radius: 5px;
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+ }
+ #timer div span {
+    display: block;
+    margin-top: -2px;
+    font-size: 15px;
+    font-weight: 500;
+ }
+
+ .timerbg{
+    padding-top: 50px;
+    width: 100%;
+    height: 50vh;
+    background-image: url('../images/timerbg.png');
+    background-position: bottom center;
+    background-attachment: top;
+    background-size: cover;
+    animation: timer-load 6000ms ease-in;
+ }
+
+ .slider{
+   width: 600px;
+   height: 400px;
+   background-image: url('../images/img1.jpg');
+   justify-content: center;
+   align-items: center;
+   background-position: bottom center;
+   background-attachment: center;
+   background-size: cover;
+   animation: slider-load 6000ms ease-in;
+   animation: slide 30s infinite;
+   /* cambiar tamaño a las imagenes */
+   
+}
+
+.accordion {
+   max-width: 990px;
+   background: rgba(0, 0, 0, 0.10);
+   height: 300px;
+   margin: 20px auto;
+   display: flex;
+   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+   flex-direction: row;
+   cursor: pointer;
+   margin-bottom: 100px;
+}
+.box {
+   position: relative;
+   height: 100%;
+   flex: 1;
+   background-position: left;
+   background-size: cover;
+   transition: .7s;
+   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+   perspective: 900px;
+}
+.box:hover{
+   flex: 7;
+   height: 400px;
+   transform: rotateY(-45deg) scale(1.1);
+}
+.a1 {
+   background-image: url('../images/accordion-rengar.jpg');
+   color: #fff;
+}
+.a2 {
+   background-image: url('../images/accordion-ahri.jpg');
+   color: #fff;
+}
+.a3 {
+   background-image: url('../images/accordion-rakan.jpg');
+   color: #fff;
+}
+.a4 {
+   background-image: url('../images/accordion-jinx.jpg');
+   color: #fff;
+}
+.a5 {
+   background-image: url('../images/accordion-vi.jpg'); 
+   color: #fff;
+}
+p {
+   font-weight: normal;
+   font-family: 'Exo 2', sans-serif;
+}
+.text {
+   position: absolute;
+   bottom: 0;
+   opacity: 0;
+   padding: 10px;
+}
+.box:hover .text{
+   opacity:1;
+}
+h1 {
+   width: 250px;
+   text-align: center;
+   margin: 100px auto 20px auto;
+}
+@media screen and (max-width: 800px){
+   body{
+       margin: 0;
+   }
+   .accordion {
+       flex-direction: column;
+       height: 700px;
+       box-shadow: none;
+   }
+   .box {
+       box-shadow: none;
+   }
+   .box:hover {
+       flex: 7;
+   }
+}
+
+@keyframes slide{
+   33%{
+       background: url('../images/img2.jpg');
+   }
+   66%{
+       background: url('../images/img3.jpg');
+   }
+   100%{
+       background: url('../images/img1.jpg');
+   }
+}
+
+ @media only screen and (max-width: 767px) {
+    #timer {
+      margin-top: -20px;
+    }
+    #timer div {
+      width: 95px;
+      height: 100px;
+      font-size: 32px;
+      margin-top: 20px;
+   }
+   #timer div span {
+     font-size: 14px;
+   }
+ }
+
+ @keyframes timer-load{
+    0%{
+       transform: translateY(-100%);
+    }
+    100%{
+      transform: translateY(0);
+    }
+ }
+
+ @keyframes slider-load{
+   0%{
+      transform: translateX(-100%);
+   }
+   100%{
+     transform: translateX(0);
+   }
+ }
