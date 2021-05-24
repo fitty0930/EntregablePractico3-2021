@@ -1,6 +1,11 @@
-body{
-   background-image: url('../images/background-body.jpg');
+body {
+    /* margin:0;
+  padding:0; */
 }
+
+
+/* estilos del timer */
+
 #timer div {
     background-color: #000000;
     color: #ffffff;
@@ -11,162 +16,213 @@ body{
     font-weight: 700;
     margin-left: 10px;
     margin-right: 10px;
- }
- #timer div span {
+}
+
+#timer div span {
     display: block;
     margin-top: -2px;
     font-size: 15px;
     font-weight: 500;
- }
+}
 
- .timerbg{
+.timerbg {
     padding-top: 50px;
     width: 100%;
     height: 50vh;
-    background-image: url('../images/timerbg.png');
+    /* background-image: url('../images/timerbg.png'); */
+    /* cambiar */
     background-position: bottom center;
     background-attachment: top;
     background-size: cover;
     animation: timer-load 6000ms ease-in;
- }
-
- .slider{
-   width: 600px;
-   height: 400px;
-   background-image: url('../images/img1.jpg');
-   justify-content: center;
-   align-items: center;
-   background-position: bottom center;
-   background-attachment: center;
-   background-size: cover;
-   animation: slider-load 6000ms ease-in;
-   animation: slide 30s infinite;
-   /* cambiar tamaño a las imagenes */
-   
 }
 
-.accordion {
-   max-width: 990px;
-   background: rgba(0, 0, 0, 0.10);
-   height: 300px;
-   margin: 20px auto;
-   display: flex;
-   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
-   flex-direction: row;
-   cursor: pointer;
-   margin-bottom: 100px;
-}
-.box {
-   position: relative;
-   height: 100%;
-   flex: 1;
-   background-position: left;
-   background-size: cover;
-   transition: .7s;
-   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
-   perspective: 900px;
-}
-.box:hover{
-   flex: 7;
-   height: 400px;
-   transform: rotateY(-45deg) scale(1.1);
-}
-.a1 {
-   background-image: url('../images/accordion-rengar.jpg');
-   color: #fff;
-}
-.a2 {
-   background-image: url('../images/accordion-ahri.jpg');
-   color: #fff;
-}
-.a3 {
-   background-image: url('../images/accordion-rakan.jpg');
-   color: #fff;
-}
-.a4 {
-   background-image: url('../images/accordion-jinx.jpg');
-   color: #fff;
-}
-.a5 {
-   background-image: url('../images/accordion-vi.jpg'); 
-   color: #fff;
-}
-p {
-   font-weight: normal;
-   font-family: 'Exo 2', sans-serif;
-}
-.text {
-   position: absolute;
-   bottom: 0;
-   opacity: 0;
-   padding: 10px;
-}
-.box:hover .text{
-   opacity:1;
-}
-h1 {
-   width: 250px;
-   text-align: center;
-   margin: 100px auto 20px auto;
-}
-@media screen and (max-width: 800px){
-   body{
-       margin: 0;
-   }
-   .accordion {
-       flex-direction: column;
-       height: 700px;
-       box-shadow: none;
-   }
-   .box {
-       box-shadow: none;
-   }
-   .box:hover {
-       flex: 7;
-   }
+
+/* estilos del parallax  */
+
+section.zoom {
+    width: 100%;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+    background: url('../images/bg-parallax.jpg');
+    background-size: cover;
 }
 
-@keyframes slide{
-   33%{
-       background: url('../images/img2.jpg');
-   }
-   66%{
-       background: url('../images/img3.jpg');
-   }
-   100%{
-       background: url('../images/img1.jpg');
-   }
+section.zoom:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    background: linear-gradient(transparent, #fff);
 }
 
- @media only screen and (max-width: 767px) {
+section.zoom .layer1 {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 90%;
+    transform: translateX(-50%);
+}
+
+section.zoom .layer2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+}
+
+section.content {
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+
+/* estilos del slideshow */
+
+.slideshow {
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 700px;
+    perspective: 1000px;
+    animation: slider-load 6000ms ease-in;
+}
+
+.content {
+    margin: auto;
+    width: 150px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 80px;
+    transform-style: preserve-3d;
+}
+
+.slider-content {
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotate 40s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.slider-content:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+.slider-content figure {
+    width: 180px;
+    height: 120px;
+    border: 1px solid #555;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slider-content img {
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-content img:hover {
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 0px #000;
+}
+
+.slider-content figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+.slider-content figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(300px);
+}
+
+.slider-content figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(300px);
+}
+
+.slider-content figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(300px);
+}
+
+.slider-content figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(300px);
+}
+
+.slider-content figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(300px);
+}
+
+.slider-content figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(300px);
+}
+
+.slider-content figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(300px);
+}
+
+.slider-content figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(300px);
+}
+
+
+/* rotacion del slideshow */
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+/* ajustar timer */
+
+@media only screen and (max-width: 767px) {
     #timer {
-      margin-top: -20px;
+        margin-top: -20px;
     }
     #timer div {
-      width: 95px;
-      height: 100px;
-      font-size: 32px;
-      margin-top: 20px;
-   }
-   #timer div span {
-     font-size: 14px;
-   }
- }
-
- @keyframes timer-load{
-    0%{
-       transform: translateY(-100%);
+        width: 95px;
+        height: 100px;
+        font-size: 32px;
+        margin-top: 20px;
     }
-    100%{
-      transform: translateY(0);
+    #timer div span {
+        font-size: 14px;
     }
- }
+}
 
- @keyframes slider-load{
-   0%{
-      transform: translateX(-100%);
-   }
-   100%{
-     transform: translateX(0);
-   }
- }
+
+/* carga del timer */
+
+@keyframes timer-load {
+    0% {
+        transform: translateX(+200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* carga del slider */
+
+@keyframes slider-load {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
