@@ -14,7 +14,7 @@ body {
     background: url('../images/elem-avion.png');
     width: 150px;
     height: 150px;
-    left: -400px;
+    left: -700px;
     top: 1100px;
 }
 
@@ -22,7 +22,7 @@ body {
     background: url('../images/elem-copo-nieve.png');
     width: 100px;
     height: 102px;
-    top: 250px;
+    top: 900px;
 }
 
 .snow1 {
