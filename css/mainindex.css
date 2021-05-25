@@ -1,6 +1,36 @@
 body {
-    /* margin: 0;
-    padding: 0; */
+    overflow-x: hidden;
+}
+
+
+/* avion en movimiento */
+
+.elem {
+    display: block;
+    position: absolute;
+}
+
+.elem-plane {
+    background: url('../images/elem-avion.png');
+    width: 150px;
+    height: 150px;
+    left: -400px;
+    top: 1100px;
+}
+
+.elem-snow {
+    background: url('../images/elem-copo-nieve.png');
+    width: 100px;
+    height: 102px;
+    top: 250px;
+}
+
+.snow1 {
+    left: 50px;
+}
+
+.snow2 {
+    right: 50px;
 }
 
 
