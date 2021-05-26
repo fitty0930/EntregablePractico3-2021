@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
@@ -15,7 +17,7 @@ body {
     width: 150px;
     height: 150px;
     left: -700px;
-    top: 1100px;
+    top: 1200px;
 }
 
 .elem-snow {
@@ -77,6 +79,7 @@ section.zoom {
     overflow: hidden;
     background: url('../images/bg-parallax.jpg');
     background-size: cover;
+    animation: slider-load 3500ms ease-in;
 }
 
 section.zoom:before {
@@ -86,7 +89,6 @@ section.zoom:before {
     width: 100%;
     height: 100px;
     z-index: 1000;
-    background: linear-gradient(transparent, #fff);
 }
 
 section.zoom .layer1 {
@@ -210,6 +212,7 @@ section.content {
     padding-top: 50px;
     position: relative;
     margin: auto;
+    height: 600px;
 }
 
 .left {
@@ -349,4 +352,23 @@ section.content {
     100% {
         transform: translateX(0);
     }
+}
+
+
+/*----------- CAJA ----------- */
+
+.caja {
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    background: #99a4c2;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #6b789b;
 }

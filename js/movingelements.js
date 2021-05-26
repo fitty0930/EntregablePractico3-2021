@@ -9,7 +9,7 @@ $(window).scroll(function() {
     }
     if ($(window).scrollTop() < 1700) {
         $(".elem-snow").css({
-            "top": NIEVE1YINICIAL + ($(window).scrollTop() * 0.55) + "px"
+            "top": NIEVE1YINICIAL + ($(window).scrollTop() * 0.60) + "px"
         });
     }
 });
