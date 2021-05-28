@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/loader.css">
     <!-- burguer menu -->
     <link rel="stylesheet" href="css/burguer-menu.css">
+    <!-- maincss -->
+    <link rel="stylesheet" href="css/comment-form.css">
+    <!-- awesomeselect -->
+    <link href="css/awdropdown.css" rel="stylesheet">
 </head>
 
 <body class="hidden">
@@ -53,12 +57,38 @@
         </div>
     </nav>
 
-
+    <!-- formulario -->
+    <div class="formulario-comments">
+        <form class="box" action="comment-form.html" method="POST">
+            <h1> Comentarios </h1>
+            <br>
+            <!-- a quien va dirigido -->
+            <!-- dropdown -->
+            <select name="characters" data-placeholder="Selecciona a quien enviar el comentario" id="chars">
+                <option value="idris"> Idris Elba (Ben Bass)</option>
+                <option value="kate"> Kate Winslet (Alex Martin)</option>
+                <option value="hany">Hany Abu-Assad (Director)</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- a el texto que le pienso enviar -->
+            <textarea id="textarea" name="comentarios" rows="10" cols="70"></textarea>
+            <label id="personalplaceholder" class="personalplaceholder"> Su comentario </label>
+            <!-- el botonazo -->
+            <input type="submit" name="" value="Enviar">
+        </form>
+    </div>
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- loader  -->
     <script src="js/loader.js"></script>
+    <!-- awesome select -->
+    <script src="js/awselect.js"></script>
+    <!-- form -->
+    <script src="js/form.js"></script>
 </body>
 
 </html>
