@@ -1,0 +1,170 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url('../images/fondo.png');
+    color: white;
+}
+
+.caja {
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    background: #99a4c2;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #6b789b;
+}
+
+.box {
+    width: 600px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #8596c4;
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+}
+
+.box h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    animation: h1-load 6000ms ease-in;
+}
+
+.box textarea {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    /* text-align: center; */
+    border: 2px solid black;
+    padding: 10px 10px;
+    width: 490px;
+    height: 200px;
+    /* modificable */
+    outline: none;
+    color: #ffffff;
+    transition: 0.25s;
+    animation: comment-load 6000ms ease-in;
+}
+
+.box textarea:focus {
+    width: 520px;
+    height: 220px;
+    border-color: blue;
+}
+
+.personalplaceholder {
+    position: absolute;
+    left: 12%;
+    top: 235px;
+    font-size: 18px;
+    font-weight: 200;
+    color: #cecece;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    animation: comment-load 6000ms ease-in;
+}
+
+textarea:focus~.personalplaceholder {
+    display: block;
+    color: white;
+    top: 200px;
+    left: 7%;
+    font-size: 14px;
+}
+
+select {
+    color: white;
+}
+
+.ocultar {
+    display: none;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.button {
+    float: right;
+    padding: 15px 25px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px rgb(70, 69, 69);
+    animation: btn-load 6000ms ease-in;
+}
+
+.button:hover {
+    background-color: rgb(86, 86, 167)
+}
+
+.button:active {
+    background-color: rgb(86, 86, 167);
+    box-shadow: 0 5px rgb(70, 69, 69);
+    transform: translateY(4px);
+}
+
+.formulario-comments {
+    width: 700px;
+    height: 100%;
+}
+
+.divejemplo {
+    animation: select-load 6000ms ease-in;
+}
+
+
+/* carga del coment form */
+
+@keyframes comment-load {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes btn-load {
+    0% {
+        transform: translateY(-500%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes h1-load {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes select-load {
+    0% {
+        transform: translateY(-800%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

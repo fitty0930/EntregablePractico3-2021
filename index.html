@@ -6,12 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Mas allá de la montaña </title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- loader -->
     <link rel="stylesheet" href="css/loader.css">
     <!-- main -->
     <link rel="stylesheet" href="css/mainindex.css">
+    <!-- burguer menu -->
+    <link rel="stylesheet" href="css/burguer-menu.css">
+    <!-- loadelems -->
+    <link rel="stylesheet" href="css/loadelems.css">
 
 </head>
 
@@ -25,45 +31,134 @@
             <div></div>
         </div>
     </div>
+    <!-- navbar menu hamburguesa -->
+    <nav role="navigation">
+        <div id="menuToggle">
 
-    <!-- seccion con parallax -->
-    <section class="zoom">
-        <img src="images/mountain1-parallax.png" class="layer1">
-        <img src="images/mountain2-parallax.png" class="layer2">
-    </section>
-    <!--  una continuacion random -->
-    <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur voluptate unde voluptatem ratione nesciunt, totam a earum deserunt ipsum? Dolorem maiores modi qui nesciunt doloribus dolorum nisi vitae rem!
-        </p>
-    </section>
-    <!-- Timer -->
-    <div class="timerbg">
-        <div id="timer" class="flex-wrap d-flex justify-content-center">
-            <div id="days" class="align-items-center flex-column d-flex justify-content-center"></div>
-            <div id="hours" class="align-items-center flex-column d-flex justify-content-center"></div>
-            <div id="minutes" class="align-items-center flex-column d-flex justify-content-center"></div>
-            <div id="seconds" class="align-items-center flex-column d-flex justify-content-center"></div>
+            <input type="checkbox" />
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="calendario-eventos.html">
+                    <li> Calendario de eventos </li>
+                </a>
+                <a href="comment-form.html">
+                    <li> Deja un comentario </li>
+                </a>
+                <a href="https://www.filmaffinity.com/ar/film745227.html">
+                    <li> Ver en FilmAffinity</li>
+                </a>
+                <a href="https://www.filmaffinity.com/ar/filmimages.php?movie_id=745227">
+                    <li> Ver todas las imagenes </li>
+                </a>
+            </ul>
         </div>
-    </div>
-    <br>
-    <br>
-    <!-- slider 3d -->
-    <section class="slideshow">
-        <div class="content">
-            <div class="slider-content">
-                <figure class="shadow"><img src="images/slideshow1.jpg"></figure>
-                <figure class="shadow"><img src="images/slideshow2.jpg"></figure>
-                <figure class="shadow"><img src="images/slideshow3.png"></figure>
-                <figure class="shadow"><img src="images/slideshow4.jpg"></figure>
-                <figure class="shadow"><img src="images/slideshow5.jpg"></figure>
-                <figure class="shadow"><img src="images/slideshow6.jpg"></figure>
-                <figure class="shadow"><img src="images/slideshow7.jpg"></figure>
-                <figure class="shadow"><img src="images/slideshow8.jpg"></figure>
-                <figure class="shadow"><img src="images/slideshow9.jpg"></figure>
+    </nav>
+    <!-- la pagina -->
+    <section>
+        <!-- seccion con parallax -->
+        <section class="zoom">
+            <img src="images/mountain1-parallax.png" class="layer1">
+            <img src="images/mountain2-parallax.png" class="layer2">
+        </section>
+        <!--  una continuacion random -->
+        <br>
+        <section>
+            <div class="caja">
+                <h1>Mas allá de la montaña</h1>
+                <small> estrena en </small>
+            </div>
+        </section>
+        <!-- Timer -->
+        <div class="module timerbg">
+            <div id="timer" class="flex-wrap d-flex justify-content-center">
+                <div id="days" class="align-items-center flex-column d-flex justify-content-center"></div>
+                <div id="hours" class="align-items-center flex-column d-flex justify-content-center"></div>
+                <div id="minutes" class="align-items-center flex-column d-flex justify-content-center"></div>
+                <div id="seconds" class="align-items-center flex-column d-flex justify-content-center"></div>
             </div>
         </div>
+        <div class="module texto-explicativo">
+            <h5>Dos personas que no se conocen tratan de sobrevivir después de sufrir un accidente aéreo en las montañas de Colorado. Sabiendo que nadie irá a rescatarlos, emprenden un peligroso viaje hacia la civilización.
+            </h5>
+        </div>
+        <br>
+
+        <!-- slider 3d -->
+        <section class="module slideshow">
+            <div class="content">
+                <div class="slider-content">
+                    <figure class="shadow"><img src="images/slideshow1.jpg"></figure>
+                    <figure class="shadow"><img src="images/slideshow2.jpg"></figure>
+                    <figure class="shadow"><img src="images/slideshow3.png"></figure>
+                    <figure class="shadow"><img src="images/slideshow4.jpg"></figure>
+                    <figure class="shadow"><img src="images/slideshow5.jpg"></figure>
+                    <figure class="shadow"><img src="images/slideshow6.jpg"></figure>
+                    <figure class="shadow"><img src="images/slideshow7.jpg"></figure>
+                    <figure class="shadow"><img src="images/slideshow8.jpg"></figure>
+                    <figure class="shadow"><img src="images/slideshow9.jpg"></figure>
+                </div>
+            </div>
+        </section>
+        <!-- elementos a mover -->
+        <div class="elem elem-plane" id="elem-plane"></div>
+        <div class="elem elem-snow snow1"></div>
+        <div class="elem elem-snow snow2"></div>
+        <!-- cards 3d -->
+        <div class="module caja">
+            <h2>Personajes</h2>
+        </div>
+        <section class="module cards">
+            <div class="card left">
+                <div class="front">
+                    <img src="images/card.jpg" alt="Ben Bass">
+                </div>
+                <div class="back">
+                    <div class="back-content middle">
+                        <h2> Ben Bass </h2>
+                        <span> Un neurocirujano británico que viaja para operar de urgencia a un niño, interpretado por
+                            Idris Elba </span>
+                        <div class="sm">
+                            <a href="https://www.facebook.com/idriselba"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/idriselba"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/idriselba"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card right">
+                <div class="front">
+                    <img src="images/card2.jpg" alt="Alex Martin">
+                </div>
+                <div class="back">
+                    <div class="back-content middle">
+                        <h2> Alex Martin </h2>
+                        <span> Una fotógrafa periodística que necesita llegar a Nueva York para casarse, interpretada
+                            por Kate Winslet </span>
+                        <div class="sm">
+                            <a href="https://www.instagram.com/kate.winslet.official"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
-    <br>
+    <!-- un pseudofooter -->
+    <footer class="bd-footer text-center text-sm-start">
+        <div class="footer">
+            <a href="https://github.com/fitty0930">GitHub</a>
+            <p> Realizado por Martin Aguirre </p>
+        </div>
+    </footer>
+
+
 
 
 
@@ -80,7 +175,10 @@
     <script src="js/timer.js"></script>
     <!-- parallax -->
     <script src="js/parallax.js"></script>
-
+    <!-- plane moving -->
+    <script src="js/movingelements.js"></script>
+    <!-- loadelems -->
+    <script src="js/loadelems.js"></script>
 </body>
 
 </html>

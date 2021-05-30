@@ -1,6 +1,39 @@
 body {
-    /* margin:0;
-  padding:0; */
+    margin: 0;
+    padding: 0;
+    background: url('../images/fondo.png');
+    overflow-x: hidden;
+}
+
+
+/* avion en movimiento */
+
+.elem {
+    display: block;
+    position: absolute;
+}
+
+.elem-plane {
+    background: url('../images/elem-avion.png');
+    width: 150px;
+    height: 150px;
+    left: -700px;
+    top: 1230px;
+}
+
+.elem-snow {
+    background: url('../images/elem-copo-nieve.png');
+    width: 100px;
+    height: 102px;
+    top: 900px;
+}
+
+.snow1 {
+    left: 50px;
+}
+
+.snow2 {
+    right: 50px;
 }
 
 
@@ -34,7 +67,7 @@ body {
     background-position: bottom center;
     background-attachment: top;
     background-size: cover;
-    animation: timer-load 6000ms ease-in;
+    /* animation: timer-load 6000ms ease-in; */
 }
 
 
@@ -47,6 +80,7 @@ section.zoom {
     overflow: hidden;
     background: url('../images/bg-parallax.jpg');
     background-size: cover;
+    /* animation: slider-load 3500ms ease-in; */
 }
 
 section.zoom:before {
@@ -56,7 +90,6 @@ section.zoom:before {
     width: 100%;
     height: 100px;
     z-index: 1000;
-    background: linear-gradient(transparent, #fff);
 }
 
 section.zoom .layer1 {
@@ -85,9 +118,9 @@ section.content {
 .slideshow {
     margin: 0 auto;
     padding-top: 50px;
-    height: 700px;
+    height: 500px;
     perspective: 1000px;
-    animation: slider-load 6000ms ease-in;
+    /* animation: slider-load 6000ms ease-in; */
 }
 
 .content {
@@ -174,6 +207,101 @@ section.content {
 }
 
 
+/* estilos de las cards */
+
+.cards {
+    padding-top: 50px;
+    position: relative;
+    margin: auto;
+    height: 600px;
+}
+
+.left {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.middle {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+}
+
+.card {
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+
+.front img {
+    height: 100%;
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content {
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.sm {
+    margin: 20px 0;
+}
+
+.sm a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #2c3e50;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%
+}
+
+.sm a:hover {
+    background: #2c3e50;
+    color: white;
+}
+
+.card:hover>.front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover>.back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+
 /* rotacion del slideshow */
 
 @keyframes rotate {
@@ -204,25 +332,35 @@ section.content {
 }
 
 
-/* carga del timer */
+/*----------- CAJA ----------- */
 
-@keyframes timer-load {
-    0% {
-        transform: translateX(+200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+.caja {
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    background: #99a4c2;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #6b789b;
 }
 
-
-/* carga del slider */
-
-@keyframes slider-load {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+.texto-explicativo {
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    background: #99a4c2;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #6b789b;
 }

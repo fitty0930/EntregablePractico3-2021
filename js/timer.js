@@ -17,4 +17,4 @@ function makeTimer() {
     $("#seconds").html(seconds + "<span>Segundos</span>");
 }
 
-setInterval(function () { makeTimer(); }, 0);
+setInterval(function() { makeTimer(); }, 0);

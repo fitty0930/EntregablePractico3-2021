@@ -1,10 +1,10 @@
-$(window).scroll(function(){
+$(window).scroll(function() {
     var scroll = $(window).scrollTop();
     $('.layer1').css({
-        width:(100+scroll/5)+'%'
+        width: (100 + scroll / 5) + '%'
     })
     $('.layer2').css({
-        width:(100+scroll/5)+'%',
-        left: scroll/50+'%'
+        width: (100 + scroll / 5) + '%',
+        left: scroll / 50 + '%'
     })
 })
