@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background: url('../images/fondo.png');
     overflow-x: hidden;
 }
 
@@ -17,7 +18,7 @@ body {
     width: 150px;
     height: 150px;
     left: -700px;
-    top: 1200px;
+    top: 1230px;
 }
 
 .elem-snow {
@@ -117,7 +118,7 @@ section.content {
 .slideshow {
     margin: 0 auto;
     padding-top: 50px;
-    height: 700px;
+    height: 500px;
     perspective: 1000px;
     /* animation: slider-load 6000ms ease-in; */
 }
@@ -339,6 +340,21 @@ section.content {
     font-size: 18px;
     font-weight: 400;
     text-align: center;
+    background: #99a4c2;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #6b789b;
+}
+
+.texto-explicativo {
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
     background: #99a4c2;
     margin: 0 0 25px;
     overflow: hidden;
