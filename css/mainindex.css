@@ -66,7 +66,7 @@ body {
     background-position: bottom center;
     background-attachment: top;
     background-size: cover;
-    animation: timer-load 6000ms ease-in;
+    /* animation: timer-load 6000ms ease-in; */
 }
 
 
@@ -79,7 +79,7 @@ section.zoom {
     overflow: hidden;
     background: url('../images/bg-parallax.jpg');
     background-size: cover;
-    animation: slider-load 3500ms ease-in;
+    /* animation: slider-load 3500ms ease-in; */
 }
 
 section.zoom:before {
@@ -119,7 +119,7 @@ section.content {
     padding-top: 50px;
     height: 700px;
     perspective: 1000px;
-    animation: slider-load 6000ms ease-in;
+    /* animation: slider-load 6000ms ease-in; */
 }
 
 .content {
@@ -327,30 +327,6 @@ section.content {
     }
     #timer div span {
         font-size: 14px;
-    }
-}
-
-
-/* carga del timer */
-
-@keyframes timer-load {
-    0% {
-        transform: translateX(+200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
-/* carga del slider */
-
-@keyframes slider-load {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
     }
 }
 

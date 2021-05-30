@@ -13,6 +13,7 @@ body {
 .wrapper {
     width: 500px;
     margin: 80px auto 0;
+    animation: wrapper-load 6000ms ease-in;
 }
 
 .wrapper .accordion_wrap .accordion_header {
@@ -111,4 +112,16 @@ body {
 
 img {
     border-radius: 30px;
+}
+
+
+/* carga del accordion */
+
+@keyframes wrapper-load {
+    0% {
+        transform: translateX(+200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
