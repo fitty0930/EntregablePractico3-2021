@@ -28,6 +28,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%, -50%);
     background: #8596c4;
     font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
@@ -41,17 +42,34 @@ body {
     animation: h1-load 6000ms ease-in;
 }
 
+.box input[type="text"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid black;
+    width: 500px;
+    color: white;
+    outline: none;
+    color: #ffffff;
+    transition: 0.25s;
+    animation: comment-load 6000ms ease-in;
+}
+
+.box input[type="text"]:focus {
+    width: 540px;
+    border-color: blue;
+}
+
 .box textarea {
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
-    /* text-align: center; */
     border: 2px solid black;
     padding: 10px 10px;
     width: 490px;
     height: 200px;
-    /* modificable */
     outline: none;
     color: #ffffff;
     transition: 0.25s;
@@ -59,15 +77,15 @@ body {
 }
 
 .box textarea:focus {
-    width: 520px;
+    width: 540px;
     height: 220px;
     border-color: blue;
 }
 
 .personalplaceholder {
     position: absolute;
-    left: 12%;
-    top: 235px;
+    left: 11%;
+    top: 450px;
     font-size: 18px;
     font-weight: 200;
     color: #cecece;
@@ -79,7 +97,7 @@ body {
 textarea:focus~.personalplaceholder {
     display: block;
     color: white;
-    top: 200px;
+    top: 425px;
     left: 7%;
     font-size: 14px;
 }
@@ -130,6 +148,15 @@ textarea {
     animation: select-load 6000ms ease-in;
 }
 
+::placeholder {
+    text-align: center;
+    color: #cecece;
+}
+
+.emptywarning {
+    border-color: red !important;
+}
+
 
 /* carga del coment form */
 
@@ -151,20 +178,11 @@ textarea {
     }
 }
 
-@keyframes h1-load {
+@keyframes select-load {
     0% {
         transform: translateX(200%);
     }
     100% {
         transform: translateX(0);
-    }
-}
-
-@keyframes select-load {
-    0% {
-        transform: translateY(-800%);
-    }
-    100% {
-        transform: translateY(0);
     }
 }
